@@ -66,18 +66,20 @@
 }
 .anmite > h1{
     position: relative;
-    top:15vw
+    top:20vw
 }
 @keyframes wid{
     0%{
         opacity: 0;
-        top:25vw
+
+        top:30vw
     }
     100%{
         opacity: 1;
-        top:15vw
+
+        top:20vw
     }
 }
 .anmite > h1{
-    animation: wid 1s 2s;
+    animation: wid  2s;
 }
