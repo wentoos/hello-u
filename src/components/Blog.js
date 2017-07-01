@@ -30,7 +30,7 @@ class Index extends Component {
                                             <img src={img} alt='img'/>
                                         </Link>
                                         <div className="desc">
-                                            <h3><Link to={item.url}>{item.title}</Link></h3>
+                                            <h3><Link to={item.url} className="lead_title">{item.title}</Link></h3>
                                             <span>发表日期：
                                                 {item.time}
                                             </span>
