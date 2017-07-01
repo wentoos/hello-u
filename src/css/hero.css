@@ -1,0 +1,83 @@
+.hero_warp ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.hero_ul li{
+    width: 100%;
+    height: 100vh;
+}
+
+.hero_ul li:nth-child(1){
+    background: url(../images/img_bg_1.jpg) no-repeat;
+}
+.hero_ul li:nth-child(2){
+    background: url(../images/img_bg_2.jpg) no-repeat;
+}
+.hero_ul li:nth-child(3){
+    background: url(../images/img_bg_3.jpg) no-repeat;
+}
+.hero_ul li h1{
+    padding: 0;
+    margin: 0 auto;
+    font-size: 45px;
+    line-height: 1.3;
+    font-weight: 100;
+    font-family: "Roboto", Arial, sans-serif;
+    color:white;
+    width: 40vw;
+    text-align: center;
+}
+.hero_btn_tab a{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 10px;
+}
+.hero_btn_tab a.flex_active {
+    background: transparent;
+    border: 2px solid #228896;
+
+}
+.hero_warp{
+    position: relative;
+}
+.hero_btn_tab {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1000;
+    right: 20px;
+    float: right;
+    width: auto;
+    height: 66px;
+}
+@keyframes ani{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.anmite{
+    animation: ani 2s;
+}
+.anmite > h1{
+    position: relative;
+    top:15vw
+}
+@keyframes wid{
+    0%{
+        opacity: 0;
+        top:25vw
+    }
+    100%{
+        opacity: 1;
+        top:15vw
+    }
+}
+.anmite > h1{
+    animation: wid 1s 2s;
+}

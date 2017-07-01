@@ -1,0 +1,16 @@
+.warp > div{
+    display: flex;
+    background: whitesmoke;
+    height: 100vh;
+}
+.warp > div>div:first-child{
+    width: 20%;
+}
+.warp > div > div:nth-child(2){
+    width: 80%;
+    overflow-y: auto;
+}
+.warp > div:nth-child(2) > div{
+    width: 93%;
+    margin: 0 auto;
+}

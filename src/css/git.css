@@ -1,0 +1,37 @@
+.git{
+    background: #ccc
+}
+.git_avatar_url img{
+    display: block;
+    width: 10vw;
+    border-radius: 50%;
+    float: left;
+    margin-right: 2em;
+}
+.git_avatar_url{
+    padding: 2em;
+    background:white;
+    margin-bottom: 2em;
+}
+.git_avatar_url > p span{
+    font-size: 24px
+}
+.git_avatar_url > p:nth-child(2){
+    margin-top: 1.5vw
+}
+.git_avatar_url > div{
+    display: flex;
+
+}
+.git_avatar_url > div p{
+    width: 20%;
+    font-size: 16px
+}
+.git_avatar_url > div p span{
+    font-size: 18px;
+    color:#0099CC;
+    margin-left: 1vw
+}
+.echart_warp{
+    background: white
+}
