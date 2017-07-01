@@ -3,6 +3,7 @@ import img from '../images/img-1.jpg'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import Loa from './Loadping'
+import QueueAnim from 'rc-queue-anim'
 import { Link } from 'react-router-dom'
 class Index extends Component {
     state={
@@ -22,27 +23,29 @@ class Index extends Component {
                 <div className="blog_tab">
     				<h2 className="blog_h2">Read Blog</h2>
     				<div>
-    					<div className="blogs">
+
+                        <QueueAnim className="blogs" type='left' interval='200'>
                             {
-                                this.props.blogData.map(item=>
-                                    <div className="blog-entry" key={item.index}>
-                                        <Link to={item.url} className="blog-img">
-                                            <img src={img} alt='img'/>
-                                        </Link>
-                                        <div className="desc">
-                                            <h3><Link to={item.url} className="lead_title">{item.title}</Link></h3>
-                                            <span>发表日期：
-                                                {item.time}
-                                            </span>
-                                            <p>{item.detail}</p>
-                                            <Link to={item.url} className="lead">Read More →
-                                            </Link>
-                                        </div>
-                                    </div>
+                                this.props.blogData.map(
+                                        item=>
+                                            <div className="blog-entry" key={item.index}>
+                                                <Link to={item.url} className="blog-img">
+                                                    <img src={img} alt='img'/>
+                                                </Link>
+                                                <div className="desc">
+                                                    <h3><Link to={item.url} className="lead_title">{item.title}</Link></h3>
+                                                    <span>发表日期：
+                                                        {item.time}
+                                                    </span>
+                                                    <p>{item.detail}</p>
+                                                    <Link to={item.url} className="lead">Read More →
+                                                    </Link>
+                                                </div>
+                                            </div>
                                 )
                             }
+                        </QueueAnim>
 
-                        </div>
                     </div>
                 </div>
             }
