@@ -78,3 +78,69 @@ li{
     transform: scaleX(0);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+.toggle{
+    position: absolute;
+    right: -80px;
+    top: 0px;
+    z-index: 9999;
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.5s;
+    display: none;
+}
+.bgc_left{
+    display: none;
+}
+.toggle i::after,.toggle i::before{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    transition: 0.2s;
+}
+.toggle i::after{
+    top:7px;
+}
+
+.toggle i::before{
+    top:-7px;
+}
+.toggle i{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    text-transform: uppercase;
+    text-indent: -55px;
+    background: #000;
+    transition: all .2s ease-out;
+}
+.togglehover i:after{
+    top:0px;
+    transform: rotateZ(-45deg);
+}
+.togglehover i:before{
+    top:0px;
+    transform: rotateZ(45deg);
+}
+.togglehover i{
+    background: transparent;
+}
+.share  ul li a{
+    display: block;
+
+}
+.share ul li{
+    float: left;
+    width: 25%;
+}
+.share ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+}
+.share{
+    margin-top: 20vw;
+}

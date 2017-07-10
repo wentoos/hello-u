@@ -16,7 +16,6 @@ class Git extends Component {
         }).catch(err=>console.log(err))
     }
     render() {
-        console.log(this.props)
         return (
             <div className='git_warp'>
                 {

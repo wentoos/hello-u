@@ -58,7 +58,7 @@ class EChart extends Component {
   render() {
     return (
         <div className='echart_warp'>
-            <div id="echart_main" style={{width: 650, height:450}}></div>
+            <div id="echart_main" style={{width:"100%", height:'100%'}}></div>
         </div>
     )
  }

@@ -20,17 +20,19 @@
     padding-left: 1%;
 }
 .blogs{
-    display: flex;
+    /*display: flex;*/
 }
 .blog-img{
     overflow: hidden;
+
     display: block;
     width: 100%;
     vertical-align: middle;
 }
 .blog-entry{
-    width: 25%;
-    margin: 10px !important;
+    width: 22%;
+    float: left;
+    margin: 10px;
     background: white;
 }
 .blog-entry img{
@@ -56,6 +58,9 @@
     text-decoration: none;
     display: block;
     width: 70%;
+}
+.desc h3 {
+    margin: 14px 0;
 }
 .desc{
 padding:0 25px 25px 25px;

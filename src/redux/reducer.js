@@ -15,8 +15,17 @@ function getUserReducer(state={},action){
         return state
   }
 }
+function catchReducer(state=false,action){
+  switch(action.type){
+    case "CATCH":
+        return !state
+    default:
+        return state
+  }
+}
 const rootReducer=combineReducers({
   data:dataReducer,
-  git:getUserReducer
+  git:getUserReducer,
+  catch:catchReducer
 })
 export default rootReducer

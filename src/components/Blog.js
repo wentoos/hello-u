@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Pagination } from 'antd';
 import img from '../images/img-1.jpg'
 import axios from 'axios'
 import { connect } from 'react-redux'
@@ -7,7 +8,8 @@ import QueueAnim from 'rc-queue-anim'
 import { Link } from 'react-router-dom'
 class Index extends Component {
     state={
-        catch:true
+        catch:true,
+        page:1
     }
     componentWillMount(){
         axios.get(`https://raw.githubusercontent.com/wentoos/blog-data/master/blog-data.json`).then(res=>{
@@ -15,7 +17,13 @@ class Index extends Component {
             this.setState({catch:false})
         })
     }
+    onChange=(page)=>{
+        // this.setState({page:page})
+        console.log(page);
+        this.setState({page})
+    }
   render() {
+      let page = this.state.page*4
     return (
         <div className='blog_warp'>
             {
@@ -23,10 +31,9 @@ class Index extends Component {
                 <div className="blog_tab">
     				<h2 className="blog_h2">Read Blog</h2>
     				<div>
-
-                        <QueueAnim className="blogs" type='left' interval='200'>
+                        <QueueAnim className="blogs clearfix" type='left' interval='200'>
                             {
-                                this.props.blogData.map(
+                                this.props.blogData.slice(page-3,page+1).map(
                                         item=>
                                             <div className="blog-entry" key={item.index}>
                                                 <Link to={item.url} className="blog-img">
@@ -45,7 +52,7 @@ class Index extends Component {
                                 )
                             }
                         </QueueAnim>
-
+                        <Pagination defaultCurrent={1} total={this.props.blogData.length} defaultPageSize={4} onChange={this.onChange}/>
                     </div>
                 </div>
             }
