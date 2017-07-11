@@ -4,7 +4,6 @@ import img from '../images/img-1.jpg'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import Loa from './Loadping'
-import QueueAnim from 'rc-queue-anim'
 import { Link } from 'react-router-dom'
 class Index extends Component {
     state={
@@ -18,12 +17,16 @@ class Index extends Component {
         })
     }
     onChange=(page)=>{
-        // this.setState({page:page})
         console.log(page);
         this.setState({page})
     }
   render() {
       let page = this.state.page*4
+      if(page===4){
+          page = 3
+      }else if (page>4) {
+          page = page - 1
+      }
     return (
         <div className='blog_warp'>
             {
@@ -31,7 +34,7 @@ class Index extends Component {
                 <div className="blog_tab">
     				<h2 className="blog_h2">Read Blog</h2>
     				<div>
-                        <QueueAnim className="blogs clearfix" type='left' interval='200'>
+                        <div className="blogs clearfix">
                             {
                                 this.props.blogData.slice(page-3,page+1).map(
                                         item=>
@@ -51,7 +54,7 @@ class Index extends Component {
                                             </div>
                                 )
                             }
-                        </QueueAnim>
+                        </div>
                         <Pagination defaultCurrent={1} total={this.props.blogData.length} defaultPageSize={4} onChange={this.onChange}/>
                     </div>
                 </div>

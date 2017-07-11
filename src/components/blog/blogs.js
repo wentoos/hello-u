@@ -4,6 +4,7 @@ import axios from 'axios'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import Loa from '../Loadping'
+import 'highlight.js/styles/atom-one-light.css'
 class Blog extends Component {
     state={
         data:'',

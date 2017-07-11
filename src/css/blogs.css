@@ -18,3 +18,26 @@
     background: #999;
     cursor: pointer;
 }
+pre{
+    background: #dbdbdb;
+    padding: 1em 2em;
+    margin: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+.post-content{
+    font-size: 14px;
+}
+.post-content h2:nth-child(2){
+    display: none;
+}
+.post-content h1{
+    text-align: center;
+    padding: 2em;
+}
+.post-content p,h2,h3,h4{
+    line-height: 2em
+}
+.post-content img{
+    width: 100%;
+}
